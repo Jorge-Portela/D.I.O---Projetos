@@ -14,6 +14,6 @@ const distanciaEmKm = 78;
 
 // execução da lógica//
 const litrosConsumidos = distanciaEmKm / kmPorLitro;
-const valorGasto = litrosConsumidos * precoCombustivel;
+const valorGasto = litrosConsumidos * precoCombustivelLitro;
 
 console.log('o valor consumido de combustível para a viagem é de R$ '+ valorGasto.toFixed(2));
