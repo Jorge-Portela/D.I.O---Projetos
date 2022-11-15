@@ -29,20 +29,30 @@ if(!numeroPar){
 
 /*---------------------------------------------------*/
 
-//Verifique se um dao número é divisível por 5 e maior que zero//
+//Verifique se um dado número é divisível por 5 e que em caso de divisão por zero seja resultado inválido//
 
-const numero = 36;
+/*const numero = 36;
 
 const divisivelPor5 = (numero % 5) === 0;
 
 if(numero === 0) {
     console.log('Resultado inválido');
-}
-
+} 
 else if(divisivelPor5) {
     console.log('É divisível por 5');
-}
-
-else{
+} 
+else {
     console.log('Não é divisível por 5');
+}*/
+
+/*---------------------------------------------------*/
+
+//Método com menos linhas
+
+const number = 19;
+
+if((number % 2) ===0 ) {
+    console.log('It is a Even Number');
+} else {
+    console.log('It is a Odd Number');
 }
