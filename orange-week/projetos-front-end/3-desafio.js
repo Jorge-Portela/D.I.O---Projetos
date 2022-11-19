@@ -11,22 +11,22 @@ Classificação:
 
 //Initial Algorithm:
 
-    let firstGrade = 7.89;
+let firstGrade = 7.89;
 
-    let secondGrade = 7;
+let secondGrade = 7;
 
-    let thirdGrade = 7;
+let thirdGrade = 7;
 
-    let isGradeMedia = (firstGrade + secondGrade + thirdGrade)/3;
+let isGradeMedia = (firstGrade + secondGrade + thirdGrade) / 3;
 
-    if (isGradeMedia < 5) {
-        console.log('Fail.');
-    } else if(isGradeMedia <= 7 ) {
-        console.log('Summer School.');
-    } else {
-        console.log('Approved!');
-    }
-    
+if (isGradeMedia < 5) {
+    console.log('Fail.');
+} else if (isGradeMedia = 5 && isGradeMedia <= 7 ) {
+    console.log('Summer School.');
+} else {
+    console.log('Approved!');
+}
 
-    
+
+
 
