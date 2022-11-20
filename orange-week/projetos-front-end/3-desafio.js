@@ -19,6 +19,8 @@ let thirdGrade = 7;
 
 let isGradeMedia = (firstGrade + secondGrade + thirdGrade) / 3;
 
+console.log('Your Semester grade is: '+isGradeMedia.toFixed(1));
+
 if (isGradeMedia < 5) {
     console.log('Fail.');
 } else if (isGradeMedia = 5 && isGradeMedia <= 7 ) {
@@ -26,6 +28,9 @@ if (isGradeMedia < 5) {
 } else {
     console.log('Approved!');
 }
+
+//End Algorithm
+
 
 
 
