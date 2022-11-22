@@ -15,33 +15,33 @@ Abstração:
 Entrada de Dados: valorProduto, tipoPagamento;
 
 Condições:
-- Á vista Débito: valorProduto - (valorProduto/10);
-- Á vista no Dinheiro ou Pix: valorProduto - (valorProduto/15); 
-- Em duas vezes: valorProduto;
-- Acima de duas vezes: valorProduto + (valorProduto/10);
+1 - Á vista Débito: valorProduto - (valorProduto/10);
+2 - Á vista no Dinheiro ou Pix: valorProduto - (valorProduto/15); 
+3 - Em duas vezes: valorProduto;
+4 - Acima de duas vezes: valorProduto + (valorProduto/10);
 */
 
 //código de tipo de pagamento: 1 - à vista débito; 2-à vista dinheiro ou pix; 3-parcelo 2x; 4-parcelado acima de 2x.
 
-let valorProduto = 50.99;
+let valorProduto = 100;
 
-const tipoPagamento = 4;
+const tipoPagamento = 1;
 
 if (tipoPagamento == 1) {
-    let valorFinalProduto = valorProduto - (valorProduto * 0.10);
-    console.log('Valor pago: R$ ' + valorFinalProduto.toFixed(2));
-} 
-else if (tipoPagamento == 2) {
-    let valorFinalProduto = valorProduto - (valorProduto * 0.15);
-    console.log('Valor pago: R$ ' + valorFinalProduto.toFixed(2));
-} 
- else if (tipoPagamento == 3) {
-    let valorFinalProduto = valorProduto;
-    console.log('Tipo de Pagamento: em 2x | Valor pago: R$ ' + valorFinalProduto.toFixed(2)); 
+    let valorFinalProduto = valorProduto - (valorProduto * 0.10); // Á vista Débito, recebe 10% de desconto
+    console.log('Tipo de Pagamento: à vista débito | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
 }
-else if (tipoPagamento ==4) {
-    let valorFinalProduto = valorProduto + (valorProduto * 0.10);
-    console.log('Tipo de Pagamento: mais de 2x | Valor pago: R$ ' + valorFinalProduto.toFixed(2)); 
+else if (tipoPagamento == 2) {
+    let valorFinalProduto = valorProduto - (valorProduto * 0.15); // Á vista no Dinheiro ou Pix, recebe 15% de desconto
+    console.log('Tipo de Pagamento: à vista dinheiro ou pix | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
+}
+else if (tipoPagamento == 3) {
+    let valorFinalProduto = valorProduto; // Em duas vezes, preço normal de etiqueta sem juros
+    console.log('Tipo de Pagamento: em 2x | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
+}
+else if (tipoPagamento == 4) {
+    let valorFinalProduto = valorProduto + (valorProduto * 0.10); // Acima de duas vezes, mais juros de 10%
+    console.log('Tipo de Pagamento: mais de 2x | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
 }
 
 
