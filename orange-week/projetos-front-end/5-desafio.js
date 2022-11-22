@@ -25,15 +25,15 @@ Condições:
 
 let valorProduto = 100;
 
-const tipoPagamento = 1;
+const tipoPagamento = 2;
 
 if (tipoPagamento == 1) {
     let valorFinalProduto = valorProduto - (valorProduto * 0.10); // Á vista Débito, recebe 10% de desconto
-    console.log('Tipo de Pagamento: à vista débito | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
+    console.log('Tipo de Pagamento: à vista débito (desconto de 10%) | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
 }
 else if (tipoPagamento == 2) {
     let valorFinalProduto = valorProduto - (valorProduto * 0.15); // Á vista no Dinheiro ou Pix, recebe 15% de desconto
-    console.log('Tipo de Pagamento: à vista dinheiro ou pix | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
+    console.log('Tipo de Pagamento: à vista dinheiro ou pix (desconto de 15%) | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
 }
 else if (tipoPagamento == 3) {
     let valorFinalProduto = valorProduto; // Em duas vezes, preço normal de etiqueta sem juros
@@ -41,7 +41,7 @@ else if (tipoPagamento == 3) {
 }
 else if (tipoPagamento == 4) {
     let valorFinalProduto = valorProduto + (valorProduto * 0.10); // Acima de duas vezes, mais juros de 10%
-    console.log('Tipo de Pagamento: mais de 2x | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
+    console.log('Tipo de Pagamento: mais de 2x (acréscimo de juros de 10%) | Valor pago: R$ ' + valorFinalProduto.toFixed(2));
 }
 
 
