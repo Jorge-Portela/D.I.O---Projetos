@@ -39,9 +39,14 @@ console.log('A soma do quadrado  é:' + quadrado(7) + quadrado(7));
 
 //para aplicação do desafio 5
 
-function incrementarJuros (valor, percentualJuros) {
+function incrementarJuros (valor, percentualJuros) {  
     const valorDeAcrescimo = (percentualJuros / 100) * valor;
     return (valor + valorDeAcrescimo).toFixed(4);
 }
 
-console.log(incrementarJuros(315, 10));
+(function main () { //Função não nomeada (imediatamente invocada)
+    console.log('O valor pago será: R$ ' + incrementarJuros(315, 10));
+})()
+
+
+
