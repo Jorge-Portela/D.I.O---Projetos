@@ -28,8 +28,9 @@ Abstração:
   - Obesidade Grave (condição: > 40);
 */
 
-let peso = 87.58;
-let altura = 1.73;
+/*
+const peso = 87.58;
+const altura = 1.73;
 
 let imc = peso / Math.pow(altura, 2);
 
@@ -49,6 +50,27 @@ else if (imc = 30 && imc <= 40) {
     console.log('Condição de IMC: Obeso');
 }
 else if (imc > 40) {
+    console.log('Condição de IMC: Obesidade Grave');
+}
+*/
+
+function calcularImc(peso, altura) {
+    return peso / Math.pow(altura,2);
+}
+
+const imc = calcularImc(93, 1.87);
+
+console.log(imc);
+
+if (imc < 18.5) {
+    console.log('Condição de IMC: Abaixo do peso');
+} else if (imc > 18.5 && imc <= 24.9) {
+    console.log('Condição de IMC: Peso normal');
+} else if (imc > 24.9 && imc <= 29.9) {
+    console.log('Condição de IMC: Acima do peso');
+} else if (imc > 29.9 && imc <= 40) {
+    console.log('Condição de IMC: Obeso');
+} else if (imc > 40) {
     console.log('Condição de IMC: Obesidade Grave');
 }
 
