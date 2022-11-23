@@ -58,20 +58,30 @@ function calcularImc(peso, altura) {
     return peso / Math.pow(altura,2);
 }
 
-const imc = calcularImc(93, 1.87);
+function classificarImc (imc) {
 
-console.log(imc);
+    if (imc < 18.5) {
+        return 'Condição de IMC: Abaixo do peso';
+    } else if (imc > 18.5 && imc <= 24.9) {
+        return 'Condição de IMC: Peso normal';
+    } else if (imc > 24.9 && imc <= 29.9) {
+        return 'Condição de IMC: Acima do peso';
+    } else if (imc > 29.9 && imc <= 40) {
+        return 'Condição de IMC: Obeso';
+    } else if (imc > 40) {
+        return 'Condição de IMC: Obesidade Grave';
+    }
+} 
 
-if (imc < 18.5) {
-    console.log('Condição de IMC: Abaixo do peso');
-} else if (imc > 18.5 && imc <= 24.9) {
-    console.log('Condição de IMC: Peso normal');
-} else if (imc > 24.9 && imc <= 29.9) {
-    console.log('Condição de IMC: Acima do peso');
-} else if (imc > 29.9 && imc <= 40) {
-    console.log('Condição de IMC: Obeso');
-} else if (imc > 40) {
-    console.log('Condição de IMC: Obesidade Grave');
+function main () {
+    const imc = calcularImc(93, 1.87);
+    
+    console.log('Seu IMC é: ' + imc.toFixed(2));
+    console.log(classificarImc(imc));
 }
+
+main ();
+
+
 
 
