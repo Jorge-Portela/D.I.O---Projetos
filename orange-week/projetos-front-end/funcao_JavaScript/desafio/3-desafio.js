@@ -22,5 +22,19 @@ Processamento:
 Saída de dados: 'Tipo de pagamento:________  | valor Pgo: R$ ' + precoEtiqueta 
 */
 
-const precoEtiqueta
-const tipoPagamento
+
+function calculateFees(typePayment, labelPrice) {
+
+    if (typePayment == 1) {
+        return labelPrice - (labelPrice*0.1); 
+    } else if (typePayment == 2) {
+        return labelPrice - (labelPrice*0.15).toFixed(2); 
+    }else if (typePayment == 3) {
+        return labelPrice;
+    }else if (typePayment == 4) {
+        return labelPrice + (labelPrice*0.1);
+    }
+}
+
+console.log(calculateFees(4, 100));
+
