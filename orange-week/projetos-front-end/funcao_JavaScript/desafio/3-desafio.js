@@ -22,19 +22,67 @@ Processamento:
 Saída de dados: 'Tipo de pagamento:________  | valor Pgo: R$ ' + precoEtiqueta 
 */
 
+/* //Solução 1  - método D.I.O 
+function applyDiscount(value, discount) {
+    return value-(value *(discount/100));
+}
+
+function applyAdd(value, add) {
+    return value+(value*(add/100));
+}
+
+ const labelPrice = 100;
+ const typePayment = 4;
+
+
+    if (typePayment == 1) {
+        console.log(applyDiscount(labelPrice, 10)); 
+    } else if (typePayment == 2) {
+        console.log(applyDiscount(labelPrice, 15)); 
+    }else if (typePayment == 3) {
+        console.log(applyDiscount(labelPrice)); 
+    }else if (typePayment == 4) {
+        console.log(applyAdd(labelPrice, 10)); 
+    }
+
+}
+*/
+
+// ----------------------------------------------------------------------------
+
+/* //solução 2
+function calculateFees(typePayment, labelPrice) {
+
+    if (typePayment == 1) {
+        return 'Tipo de Pagamento: desconto 10%  | Valor a ser pago: R$ ' + (labelPrice - (labelPrice*0.1)); 
+    } else if (typePayment == 2) {
+        return 'Tipo de Pagamento: desconto 15%  | Valor a ser pago: R$ ' + (labelPrice - (labelPrice*0.15)); 
+    }else if (typePayment == 3) {
+        return 'Tipo de Pagamento: em 2x | Valor a ser pago: R$ ' + (labelPrice);
+    }else if (typePayment == 4) {
+        return 'Tipo de Pagamento: mais de 2x | Valor a ser pago: R$ ' + (labelPrice + (labelPrice*0.1));
+    }
+}
+
+console.log(calculateFees(2, 100));
+*/
+
+// ----------------------------------------------------------------------------
+
+//solução 3 
+
 
 function calculateFees(typePayment, labelPrice) {
 
     if (typePayment == 1) {
-        return labelPrice - (labelPrice*0.1); 
+        return labelPrice - (labelPrice * 0.1);
     } else if (typePayment == 2) {
-        return labelPrice - (labelPrice*0.15).toFixed(2); 
-    }else if (typePayment == 3) {
+        return labelPrice - (labelPrice * 0.15);
+    } else if (typePayment == 3) {
         return labelPrice;
-    }else if (typePayment == 4) {
-        return labelPrice + (labelPrice*0.1);
+    } else if (typePayment == 4) {
+        return labelPrice + (labelPrice * 0.1);
     }
 }
 
-console.log(calculateFees(4, 100));
-
+console.log(calculateFees(2, 100));
