@@ -1,3 +1,4 @@
+
 // Objetos: Em JavaScript, um objeto é uma coleção dinâmica de chave e valor, em que é possível adicionar e remover valores.
 
 /*
@@ -31,17 +32,39 @@ console.log(jorge.stack)
 /* Para DELETAR valor basta declarar "delete" com um "espaço" antes do parâmetro a ser deletado sintaxe:
  delete <nome_do_objeto>.<nome_do_parÂmetro> */
 
+ /* this:  */
+ /*  Template String => ${}: Responsável por criar Strings substituindo espaço reservados */
+/*Ordem: sempre se atentar para ordem ao declarar um novo valor para objetos e funções. Pois o compilado irá considera quem vem antes do último. */
 const car = {
     name: 'BMW',
     year: 2022,
-    model: 'i7 Turbo'
+    model: 'i7',
+
+    detail: function () {
+        console.log(`My car is ${this.name} and it year's is ${this.year}`);
+    }
 };
 
-car.color='chromed black';
-car.fuel='Diesel';
+// adicionando novos valores ao objeto:
+car.color='Chrome Black',
+car.fuel='diesel';
 
-delete car.year;
+// trocando os valores do objeto:
+car.name = 'Audi';
 
-console.log(car);
+car.detail = function() {
+    console.log(`My car is ${this.name}`);
+}
+
+//chamando a função desse objeto:
+car.detail();
+
+
+
+
+
+
+
+
 
 
