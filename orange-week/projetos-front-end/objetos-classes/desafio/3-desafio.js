@@ -27,25 +27,25 @@ class Person {
         this.height = height;
         }
 
+        rateItImc () {
+            const imc = this.calculateImc();
+            if (imc < 18.5) {
+                return 'Condição de IMC: Abaixo do peso';
+            } else if (imc > 18.5 && imc <= 24.9) {
+                return 'Condição de IMC: Peso normal';
+            } else if (imc > 24.9 && imc <= 29.9) {
+                return 'Condição de IMC: Acima do peso';
+            } else if (imc > 29.9 && imc <= 40) {
+                return 'Condição de IMC: Obeso';
+            } else if (imc > 40) {
+                return 'Condição de IMC: Obesidade Grave';
+            }
+        }
 }
 
-function rateItImc (personImc) {
-
-    if (personImc.calculateImc() < 18.5) {
-        return 'Condição de IMC: Abaixo do peso';
-    } else if (personImc.calculateImc() > 18.5 && personImc.calculateImc() <= 24.9) {
-        return 'Condição de IMC: Peso normal';
-    } else if (personImc.calculateImc() > 24.9 && personImc.calculateImc() <= 29.9) {
-        return 'Condição de IMC: Acima do peso';
-    } else if (personImc.calculateImc() > 29.9 && personImc.calculateImc() <= 40) {
-        return 'Condição de IMC: Obeso';
-    } else if (personImc.calculateImc() > 40) {
-        return 'Condição de IMC: Obesidade Grave';
-    }
-}
-
-const jose = new Person ('José Falconi', 70, 1.75)
+// uma função é sempre fora da classe, enquanto os metódos estão iseridos dentro da classe!!!
+const jose = new Person ('José Falconi', 90, 1.75)
 console.log(jose);
 console.log('Seu IMC é: ' + jose.calculateImc().toFixed(1));
-console.log(rateItImc(jose));
+console.log(jose.rateItImc());
 
