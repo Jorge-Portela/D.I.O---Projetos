@@ -15,33 +15,37 @@ class Person {
     name;
     weight;
     height;
-    imc;
+
+    calculateImc () {
+        return  this.weight / Math.pow(this.height,2)
+    }
+    
 
     constructor (name, weight, height, imc) {
         this.name = name;
         this.weight = weight;
         this.height = height;
-        this.imc = imc;
         }
 
 }
 
 function rateItImc (personImc) {
 
-    if (personImc.imc < 18.5) {
+    if (personImc.calculateImc() < 18.5) {
         return 'Condição de IMC: Abaixo do peso';
-    } else if (personImc.imc > 18.5 && personImc.imc <= 24.9) {
+    } else if (personImc.calculateImc() > 18.5 && personImc.calculateImc() <= 24.9) {
         return 'Condição de IMC: Peso normal';
-    } else if (personImc.imc > 24.9 && personImc.imc <= 29.9) {
+    } else if (personImc.calculateImc() > 24.9 && personImc.calculateImc() <= 29.9) {
         return 'Condição de IMC: Acima do peso';
-    } else if (personImc.imc > 29.9 && personImc.imc <= 40) {
+    } else if (personImc.calculateImc() > 29.9 && personImc.calculateImc() <= 40) {
         return 'Condição de IMC: Obeso';
-    } else if (personImc.imc > 40) {
+    } else if (personImc.calculateImc() > 40) {
         return 'Condição de IMC: Obesidade Grave';
     }
 }
 
-const jose = new Person ('José Falconi', 70, 1.75, (70 / Math.pow(1.75,2)) );
+const jose = new Person ('José Falconi', 70, 1.75)
 console.log(jose);
+console.log('Seu IMC é: ' + jose.calculateImc().toFixed(1));
 console.log(rateItImc(jose));
 
