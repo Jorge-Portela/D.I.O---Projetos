@@ -32,11 +32,11 @@ class Person {
             if (imc < 18.5) {
                 return 'Condição de IMC: Abaixo do peso';
             } else if (imc > 18.5 && imc <= 24.9) {
-                return 'Condição de IMC: Peso ideal';
+                return 'Condição de IMC: Peso normal';
             } else if (imc > 24.9 && imc <= 29.9) {
                 return 'Condição de IMC: Acima do peso';
             } else if (imc > 29.9 && imc <= 40) {
-                return 'Condição de IMC: Obesidade';
+                return 'Condição de IMC: Obeso';
             } else if (imc > 40) {
                 return 'Condição de IMC: Obesidade Grave';
             }
