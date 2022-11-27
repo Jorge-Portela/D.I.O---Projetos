@@ -36,7 +36,7 @@ class Person {
             } else if (imc > 24.9 && imc <= 29.9) {
                 return 'Condição de IMC: Acima do peso';
             } else if (imc > 29.9 && imc <= 40) {
-                return 'Condição de IMC: Obeso';
+                return 'Condição de IMC: Obesidade';
             } else if (imc > 40) {
                 return 'Condição de IMC: Obesidade Grave';
             }
