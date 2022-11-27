@@ -43,7 +43,7 @@ class Person {
         }
 }
 
-// uma função é sempre fora da classe, enquanto os metódos estão iseridos dentro da classe!!!
+// uma função é sempre fora da classe, enquanto os métodos estão inseridos dentro da classe!!!
 const jose = new Person ('José Falconi', 90, 1.75)
 console.log(jose);
 console.log('Seu IMC é: ' + jose.calculateImc().toFixed(1));
