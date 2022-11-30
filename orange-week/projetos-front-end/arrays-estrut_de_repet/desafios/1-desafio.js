@@ -1,4 +1,4 @@
-/// Crie um programa que dado um número imprima a sua tabuada
+// Crie um programa que dado um número imprima a sua tabuada
 
 const number = 7;
 
