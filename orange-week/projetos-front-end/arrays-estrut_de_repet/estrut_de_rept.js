@@ -23,9 +23,9 @@ console.log(grade)
 let sum = 0;
 
 for (let i = 0; i < grade.length; i++) {
-    const grades = grade[i];
+    const finalGrade = grade[i];
 
-    sum = sum + grades; 
+    sum = sum + finalGrade; 
 }
 
 const media = sum/grade.length;
