@@ -6,11 +6,37 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pokedex</title>
+
+        <style>
+            h1{
+                color: red;
+            }
+
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+        </style>
+
     </head>
 
     <body>
 
-        <h1>Test</h1>
+        <h1>My first webpage</h1>
+            <p>My front page is being mentored by DIO</p>
+
+        <button id="btnTest" type="button">Test</button>
+
+       
+
+        <script>  // boa prática não aninh-lo no header para dar mais dinâmica á pagina quando carrega-la
+            const btnTest = document.getElementById("btnTest");
+            btnTest.addEventListener("click", function(){
+                console.log("clicked on the button!");
+            })
+            
+
+        </script>
 
     </body>
 
