@@ -29,7 +29,7 @@ console.log(jorge.stack)
 /* Ao incrementar um novo parâmetro para um objeto, deve seguir com a seguinte sintaxe:
  <nome_do_objeto>.<nome_da_chave> = <valor_da_chave> */
 
-/* Para DELETAR valor basta declarar "delete" com um "espaço" antes do parâmetro a ser deletado sintaxe:
+/* Para DELETAR valor basta declarar "delete" com um "espaço" antes da chave que será deletada da sintaxe:
  delete <nome_do_objeto>.<nome_da_chave> */
 
  /* this:  */
