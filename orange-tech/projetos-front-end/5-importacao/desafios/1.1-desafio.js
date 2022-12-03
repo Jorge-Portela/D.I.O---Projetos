@@ -12,6 +12,5 @@ print(gets());
 print(gets());
 print(gets());
 print(gets());
-print(gets());
-print(gets());
+
 
